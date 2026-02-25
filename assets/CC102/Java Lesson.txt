@@ -1,0 +1,51 @@
+Java History
+
+    Sun Microsystems:
+        - James Gosling - Father of Java
+        - Released in 1995 Java 1.0 (J2SE)
+        - was then later obtained by Oracle.
+
+        Various configs. for various platforms:
+            J2EE - Enterprise Applications
+            J2ME - Mobile Applications
+            
+            Was then later renamed:
+                Java SE = Standard Edition (ok)
+                Java EE = Enterprise Edition (usually paid)
+                Java ME = Micro Edition (for small applications)
+
+    Java's Mantra: Write Once, Run Anywhere (WORA)
+
+    Key Features of Java:
+        1. Object-Oriented: Everything in Java is an object, supporting easy extensibility.
+        2. Platform Independent: Java compiles into platform-independent bytecode, which runs on any platform with JVM.
+        3. Simple: Design to be easy to learn, especially for those familiar with OOP.
+        4. Secure: Enables virus-free, tamper-free development using public-key encryption.
+        5. Architecture-Neutral: Compiled code runs on many processors with Java runtime.
+        6. Portable: NO implementation-dependent aspects; the compiler is written in ANSI C.
+        7. Robust: Eliminates error-prone situations with extensive compile-time and runtime checks.
+        8. Multithreaded: Allows simultaneous task executions for smooth, interactive applications.
+        9. Interpreted: Bytecode is translated on-the-fly to native instructions.
+        10. High Performance: Achieved through Just-In-Time(JIT) compilers.
+        11. Distributed: Designed for distributed computing in the internet environment.
+        12. Dynamic: Adapts to evolving environments, with extensive runtime information.
+
+History:
+    June 1991: Initiated by James Gosling for a set-top box project.
+        - Initially called "Oak", later named "Green", and finally "Java".
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter age: ");
+        int age = sc.nextInt();
+        
+        System.out.print("Your Age is: ");
+        System.out.print(age);
+    }
+}
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
