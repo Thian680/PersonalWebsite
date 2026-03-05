@@ -17,6 +17,10 @@ header {
   padding: 20px;
 }
 
+h1 {
+  color: white;
+}
+
 body {
   background-color: black;
 }
@@ -54,7 +58,8 @@ body {
   transform: translatey(-5px);
 }
 
-#pictures p {
+#pictures p,
+#random-pictures p {
   text-align: center;
   border-bottom: 2px solid white;
   margin-bottom: 50px;
@@ -136,6 +141,13 @@ body {
   color: rgb(0, 0, 0);
 }
 
+.picbtn a:active {
+  background-color: whitesmoke;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+
 /*picturessssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss*/
 .grid {
   display: grid;
@@ -144,9 +156,44 @@ body {
   justify-items: center;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  justify-items: center;
+}
+
+.grid-random {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  column-gap: 18px;
+  justify-content: center;
+}
+
+
+.grid-random .grid-image {
+  width: auto; 
+  flex: 0 1 auto; 
+  max-width: 400px;
+}
+
+.grid-random .grid-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 8px;
+  transition: 0.5s ease-in-out;
+  object-fit: cover;
+}
+
+.grid-random .grid-image img:hover {
+  transform: scale(1.05);
+}
+
 .grid-image {
   width: 100%;
-  max-width: 600px;
 }
 
 .grid-image img {
@@ -156,7 +203,7 @@ body {
   flex-wrap: wrap;
   border: 2px solid rgb(255, 255, 255);
   border-radius: 8px;
-  transition: 0.5s;
+  transition: 0.5s ease-in-out;
 }
 
 .grid-image img:hover {
@@ -204,10 +251,18 @@ footer {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid-random {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
   .grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-random {
+    justify-content: center;
   }
 }
